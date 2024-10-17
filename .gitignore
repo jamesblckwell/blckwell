@@ -22,3 +22,6 @@ vite.config.ts.timestamp-*
 
 # Bun
 bun.lockb
+
+# Firebase
+firebase-debug.log
