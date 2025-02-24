@@ -1,8 +1,23 @@
 <script lang="ts">
 	import '../app.css';
-	// import type { LayoutData } from './$types';
+	import Nav from '$components/Nav.svelte';
+	import { showNav, pageTitle } from '$stores/store';
 
-	// export let data: LayoutData;
+	$pageTitle = 'Home';
+	$showNav = true;
 </script>
 
+<svelte:head>
+	<title>{$pageTitle} | Blckwell.net</title>
+</svelte:head>
+
+{#if $showNav}
+	<Nav></Nav>
+{/if}
 <slot />
+
+<style>
+	:global(body) {
+		font-family: 'Open Sans', sans-serif;
+	}
+</style>
